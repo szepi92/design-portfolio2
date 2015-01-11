@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+
+
+
+}
+
+@media (orientation: portrait) {
+
+.page {
+	height: 33.3333333333%;
+}
+
+}

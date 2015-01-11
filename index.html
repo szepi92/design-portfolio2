@@ -14,8 +14,12 @@
 	<!-- TODO: Favicon -->
 	<link rel="icon" href="assets/favicon.ico">
 	
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+	
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/animate.css" type="text/css">
+	<link rel="stylesheet" href="css/style.phone.css" type="text/css">
+	<link rel="stylesheet" href="css/animations.css" type="text/css">
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
 	<!-- <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> -->
 
@@ -30,12 +34,72 @@
 </head>
 
 <body>
-	<div class="page splash-page">
-		<img class="title-image v-center h-center" src="assets/title-header-good.svg" />
+	<!--Splash-->
+	<div class="page" id="splash-page">
+		<img class="title-image v-center h-center fadeIn" src="assets/title-header-good.svg" />
+		
+		<ul class="nav-bar fadeIn">
+			<li class="nav-bar-item"><a class="scroll-click" href="#about-page">About</a></li>
+			<li class="nav-bar-item"><a class="scroll-click" href="#skills-page">Skills</a></li>
+			<li class="nav-bar-item"><a class="scroll-click" href="#projects-page">Projects</a></li>
+			<li class="nav-bar-item"><a class="scroll-click" href="#contact-page">Contact</a></li>
+		</ul>
 	</div>
 	
-	<div class="page">
+	<!--About-->
+	<div class="page" id="about-page">
+		<div class="grid" data-rows="1" data-columns="2">
+			<div class="grid-cell">
+				<div id="about-reka-block" class="v-center h-center">
+					<h1>Something cool about me</h1>
+					<h1>Something cool about me</h1>
+					<h1>Something cool about me</h1>
+					<h1>Something cool about me</h1>
+				</div>
+			</div>
+			<div class="grid-cell" id="reka-cell">
+				<img id="reka-image" class="js-hidden" src="assets/reka.png" />
+			</div>
+		</div>
 	</div>
+	
+	<!-- Skills-->
+	<div class="page" id="skills-page">
+		<div class="wrapper h-center">
+			<div class="grid">
+				<div class="grid-cell skill-card">
+					<h3>Technical</h3>
+					<p>Adobe Creative Suite 6, HTML5/CSS3, JavaScript, Responsive Web Design</p>
+				</div>
+				<div class="grid-cell skill-card">
+					<h3>Technical</h3>
+					<p>Adobe Creative Suite 6, HTML5/CSS3, JavaScript, Responsive Web Design</p>
+				</div>
+				<div class="grid-cell skill-card">
+					<h3>Technical</h3>
+					<p>Adobe Creative Suite 6, HTML5/CSS3, JavaScript, Responsive Web Design</p>
+				</div>
+				<div class="grid-cell skill-card">
+					<h3>Technical</h3>
+					<p>Adobe Creative Suite 6, HTML5/CSS3, JavaScript, Responsive Web Design</p>
+				</div>
+				<div class="grid-cell skill-card">
+					<h3>Technical</h3>
+					<p>Adobe Creative Suite 6, HTML5/CSS3, JavaScript, Responsive Web Design</p>
+				</div>
+				<div class="grid-cell skill-card">
+					<h3>Technical</h3>
+					<p>Adobe Creative Suite 6, HTML5/CSS3, JavaScript, Responsive Web Design</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Projects-->
+	<div class="page" id="projects-page">
+
+	</div>
+	
 	
 	
 	<!-- JavaScript Included at bottom of page for quick page loads -->
@@ -46,9 +110,11 @@
 	<!-- <script src="js/bootstrap.min.js"></script> -->
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
 	<script src="js/jquery.center.min.js"></script>
-	<script src="js/custom.js"></script>
-	<script src="js/retina.js"></script>
+	<script src="js/retina.min.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/jquery.windows.js"></script>
+	
+	<script src="js/custom.js"></script>
 </body>
 </html>

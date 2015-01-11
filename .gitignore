@@ -7,3 +7,7 @@ Mockups/*.AI
 *.AI
 *.ai
 patterns/*
+
+assets/icons/ai*
+assets/icons*.ai
+assets/icons*.AI

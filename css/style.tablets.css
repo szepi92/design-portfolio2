@@ -1,0 +1,8 @@
+@media (min-width: 768px) and (max-width: 991px) {
+
+.my-container {
+	width: 100%;
+	background-color: blue;
+}
+
+}

@@ -1,3 +1,5 @@
+
+
 // This document initializes everything on load!
 $(document).ready(function(){
 
@@ -8,7 +10,8 @@ $('.js-hidden').delay(0).fadeTo(0,0,'linear');
 $('.grid').masonry({
 	itemSelector: '.grid-cell',
 	gutter: 0,
-	containerStyle: {}
+	containerStyle: {},
+	isFitWidth: true
 });
 
 // TODO: THIS DOESN'T DO ANYTHING RIGHT NOW!!!
@@ -38,10 +41,8 @@ $('.page').windows({
 	$('#about-page').waypoint({
 		handler: function(direction) {
 			if (direction === 'down') {
-				console.log("stick");
 				$('#reka-image').addClass("sticky");
 			} else {
-				console.log("unstick");
 				$('#reka-image').removeClass("sticky");
 			}
 		}
@@ -51,10 +52,8 @@ $('.page').windows({
 	$('#about-page').waypoint({
 		handler: function(direction) {
 			if (direction === 'down') {
-				console.log("hide");
 				$('#reka-image').addClass("hidden");
 			} else {
-				console.log("unhide");
 				$('#reka-image').removeClass("hidden");
 			}
 		},

@@ -8,3 +8,6 @@ Mockups/*.AI
 *.ai
 patterns/*
 */Thumbs.db
+assets/icons/ai/*
+assets/icons/*.ai
+assets/icons/*.AI

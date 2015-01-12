@@ -245,7 +245,7 @@ h6 {
 }
 
 #philosophy {
-	font-size: 35px;
+	font-size: 32px;
 	font-family: 'Cardo', serif;
 	font-style: italic;
 	width: 80%;
@@ -360,7 +360,7 @@ h6 {
 }
 
 .ext-link:hover {
-	color: #00B2DB;
+	color: #319CC3;
 }
 
 .project .grid-sizer {

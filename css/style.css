@@ -341,6 +341,7 @@ ul {
 -------------------------------------------------- */
 #skills-page {
 	background: white;
+	min-height: 300px;
 }
 
 #skills-page .wrapper {

@@ -449,7 +449,7 @@ a:link, a:visited {
 }
 
 #contact-header {
-	padding-top: 10%;
+	padding-top: 15%;
 }
 
 #contact-header p {
@@ -467,7 +467,7 @@ a:link, a:visited {
 	height: 60px;
 	margin-left: 1.5%;
 	margin-right: 1.5%;
-	margin-top: 4%;
+	margin-top: 2%;
 	opacity: 0.5;
 }
 
@@ -476,5 +476,5 @@ a:link, a:visited {
 }
 
 #portfolio {
-	
+	margin-top: 2%;
 }

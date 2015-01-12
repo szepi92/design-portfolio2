@@ -1,0 +1,5 @@
+bugs:
+	1 top menu lights up a little too late and takes you a little too down 
+	2 when the top bar is fixed the pages should not take up the full 
+		browser height but rather browser height - topbar
+		this would fix bug1

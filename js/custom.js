@@ -20,6 +20,9 @@ $('.grid').each(function(idx, el){
 		columnWidth: columnWidth
 	});
 	
+	$(this).imagesLoaded(function(){
+		$(this).masonry();
+	});
 });
 
 function setActivePage(id) {

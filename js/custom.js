@@ -73,10 +73,8 @@ function setActivePage(id) {
 		handler: function(direction) {
 			if (direction === 'down') {
 				setActivePage('#about-page');
-				$('#reka-image').addClass("sticky");
 			} else {
 				setActivePage('');
-				$('#reka-image').removeClass("sticky");
 			}
 		}
 	});

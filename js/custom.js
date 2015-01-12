@@ -182,4 +182,18 @@ $('a.scroll-click').click(function(){
 	return false;
 });
 
+
+// Mobile menu!
+function updateButtonState() {
+	if ($('.drop-down').is(":visible")) {
+		$('#menu-button').addClass('pressed');
+	} else {
+		$('#menu-button').removeClass('pressed');
+	}
+}
+
+$('#menu-button').click(function(){
+	$('.drop-down').toggle(200, updateButtonState);
+});
+
 });

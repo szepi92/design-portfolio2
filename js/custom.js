@@ -73,10 +73,8 @@ function setActivePage(id) {
 		handler: function(direction) {
 			if (direction === 'down') {
 				setActivePage('#about-page');
-				$('#reka-image').addClass("sticky");
 			} else {
 				setActivePage('');
-				$('#reka-image').removeClass("sticky");
 			}
 		}
 	});
@@ -180,6 +178,20 @@ $('a.scroll-click').click(function(){
 	
 	$('body,html').animate({scrollTop: top}, 1000);
 	return false;
+});
+
+
+// Mobile menu!
+function updateButtonState() {
+	if ($('.drop-down').is(":visible")) {
+		$('#menu-button').addClass('pressed');
+	} else {
+		$('#menu-button').removeClass('pressed');
+	}
+}
+
+$('#menu-button').click(function(){
+	$('.drop-down').toggle(200, updateButtonState);
 });
 
 });

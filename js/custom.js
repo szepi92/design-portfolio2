@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 // Hack to hide things while still forcing them to load
-$('.js-hidden').delay(1).fadeTo(0,0,'linear');		
+$('.js-hidden').delay(1).fadeTo(0,0,'linear');
 
 // Style grid-cells to play nicely (Masonry!)
 $('.grid').each(function(idx, el){
@@ -40,8 +40,10 @@ $('.page').windows({
 		handler: function(direction) {
 			if (direction === 'down') {
 				$('.nav-bar').addClass("sticky");
+				$('#small-logo').addClass("sticky");
 			} else {
 				$('.nav-bar').removeClass("sticky");
+				$('#small-logo').removeClass("sticky");
 			}
 		}
 	})
@@ -49,6 +51,12 @@ $('.page').windows({
 	// When about half-way, fade in Reka
 	$('#about-page').waypoint({
 		handler: function(direction) {
+			if (direction == 'down') {
+				$('.title-image').stop().animate({opacity: 0}, 1000);
+			} else {
+				$('.title-image').stop().animate({opacity: 1}, 1000);
+			}
+			
 			if (seen['#about-page']) { return; }
 			seen['#about-page'] = true;
 			$('#reka-image').delay(2).fadeTo(1000, 1, 'linear');
@@ -80,7 +88,6 @@ $('.page').windows({
 		
 		offset: '-95%'
 	});
-	
 })();
 
 

@@ -163,7 +163,12 @@ h6 {
 	padding-bottom: 13px;
 	
 	margin: 0;
-	background: #231F20;
+	background-color: transparent;
+	
+	transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-webkit-transition: background-color 1s;
+	-o-transition: background-color 1s;
 }
 
 .nav-bar li {
@@ -200,8 +205,10 @@ h6 {
 .nav-bar.sticky {
 	position: fixed;
 	top: 0;
-	bottom: initial;
+	bottom: auto;
+	height: 26px;
 	z-index: 5000000;
+	background-color: #231F20;
 	/*right: 0;
 	margin: 0;
 	

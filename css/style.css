@@ -428,11 +428,11 @@ ul {
 .ext-link {
 	font-size: 16px;
 	margin-right: 4%;
-	color: #5a5a5a;
+	color: #319CC3;
 }
 
 .ext-link:hover {
-	color: #319CC3;
+	color: #54c3eb;
 }
 
 .project .grid-sizer {

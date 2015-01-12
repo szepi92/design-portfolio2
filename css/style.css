@@ -171,15 +171,15 @@ a:link, a:visited {
 	background-color: transparent;
 	opacity: 0;
 	
-	transition: opacity 2s;
-	-webkit-transition: opacity 2s;
-	-o-transition: opacity 2s;
-	-moz-transition: opacity 2s;
+	transition: opacity 2s, width 0.5s, height 0.5s;
+	-webkit-transition: opacity 2s, width 0.5s, height 0.5s;
+	-o-transition: opacity 2s, width 0.5s, height 0.5s;
+	-moz-transition: opacity 2s, width 0.5s, height 0.5s;
 }
 
 #small-logo.sticky {
 	position: fixed;
-	top: 13px;
+	top: 11px;
 	opacity: 1;
 	
 	transition: opacity 1s;
@@ -204,11 +204,6 @@ a:link, a:visited {
 	
 	margin: 0;
 	background-color: transparent;
-	
-	transition: background-color 1s;
-	-moz-transition: background-color 1s;
-	-webkit-transition: background-color 1s;
-	-o-transition: background-color 1s;
 }
 
 .nav-bar li {

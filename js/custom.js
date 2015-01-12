@@ -12,7 +12,7 @@ $('.grid').each(function(idx, el){
 	var columnWidth = $el.data("columnWidth");
 	if (!_.isFinite(gutter)) gutter = 0;
 	
-	$(this).masonry({
+	var msn = $(this).masonry({
 		itemSelector: '.grid-cell',
 		gutter: gutter,
 		containerStyle: {},
@@ -21,7 +21,7 @@ $('.grid').each(function(idx, el){
 	});
 	
 	$(this).imagesLoaded(function(){
-		$(this).masonry();
+		msn.masonry();
 	});
 });
 

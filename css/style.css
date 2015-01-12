@@ -12,13 +12,14 @@ body {
 
 }
 
-ul {
+
+.nav-bar {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-ul li {
+.nav-bar li {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -183,7 +184,7 @@ h6 {
 }
 
 .nav-bar .nav-bar-item a:hover {
-	color: #E8B36A;
+	color: #319CC3;
 }
 
 /* Whenever you want a little margin */
@@ -233,6 +234,28 @@ h6 {
 	right: 0px;
 	z-index: -10;
 	max-width: 50%;
+}
+
+.about-me-title {
+	display: inline-block;
+	font-size: 60px;
+}
+
+#and {
+	font-family: 'Niconne', cursive;
+	display: inline-block;
+	font-size: 60px;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#philosophy {
+	font-size: 35px;
+	font-family: 'Cardo', serif;
+	font-style: italic;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 /* SKILLS PAGE
@@ -331,3 +354,16 @@ h6 {
 	padding-left: 5%;
 }
 
+.ext-link {
+	font-size: 16px;
+	margin-right: 4%;
+	color: #5a5a5a;
+}
+
+.ext-link:hover {
+	color: #00B2DB;
+}
+
+.project .grid-sizer {
+	width: 25%;
+}

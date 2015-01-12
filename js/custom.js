@@ -73,4 +73,29 @@ $('.page').windows({
 	
 })();
 
+
+// Lightbox (the gallery!)
+$('.thumbnails').each(function() {
+	// Do this for each thumbnails-div once the images are loaded
+	$(this).imagesLoaded(function(data){
+		// Extract the set of <img /> children
+		items = [];
+		$el = $(data.elements[0]);
+		$el.find('img').each(function(){
+			items.push({
+				src: $(this).attr('src'),
+				title: $(this).attr('alt')
+			})
+		});
+		
+		// Setup the MagnificPopup light-box gallery with these items
+		$el.magnificPopup({
+			type: 'image',
+			gallery: { enabled: true },
+			items: items,
+			image : { cursor: null }
+		});
+	});
+});
+
 });

@@ -12,14 +12,12 @@
 	}
 }
 
-@media (min-width: 768px) {
-	.nav-bar .media-lg { display: initial; }
-	.nav-bar .media-sm { display: none; }
-	
-}
+/*.nav-bar .media-lg { display: initial; }
+.nav-bar .media-sm { display: none; }*/
 
+/*
 @media (max-width: 767px) {
 	.nav-bar .media-lg { display: none; }
 	.nav-bar .media-sm { display: block; }
 	.nav-bar { min-width: 300px;}
-}
+}*/

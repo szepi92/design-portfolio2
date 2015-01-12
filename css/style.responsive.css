@@ -197,5 +197,29 @@
 	}
 }
 
+/* RESPONSIVE PROJECTS-PAGE
+-------------------------------------------------- */
+@media (max-width: 767px) {
+	#project-header {
+		height: 140px;
+	}
+	
+	#project-header h1 {
+		font-size: 80px;
+		line-height: 140px;
+	}
+}
+
+@media (max-width: 400px) {
+	#project-header {
+		height: 100px;
+	}
+	#project-header h1 {
+		font-size: 60px;
+		line-height: 100px;
+	}
+}
+
+
 /* RESPONSIVE CONTACT ME
 -------------------------------------------------- */

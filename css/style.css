@@ -423,22 +423,20 @@ ul {
 .project .grid {
 	height: 100%;
 	width: 100%;
-	padding: 0px;
-}
-
-.project .grid-sizer {
-	width: 25%;
+	padding: 0;
 }
 
 .project .grid-cell {
 	height: 100%;
-	width: 50%;
+	width: 49.5%;
 	margin: 0;
+	border: none;
+	vertical-align: top;
 }
 
 .project .thumbnails {
 	width: 100%;
-	height: 99%;
+	height: 100%;
 	max-width: 100%;
 	max-height: 100%;
 	overflow: hidden;
@@ -450,7 +448,14 @@ ul {
 
 .project .project-dscrp {
 	width: 90%;
-	margin-left: 10%;
+	padding-left:10%;
+}
+
+.project .project-dscrp,
+.project .grid-cell,
+.project .grid
+{
+	overflow: visible;
 }
 
 .project .links {
@@ -466,10 +471,6 @@ ul {
 
 .ext-link:hover {
 	color: #319CC3;
-}
-
-.project .grid-sizer {
-	width: 25%;
 }
 
 /* CONTACT PAGE

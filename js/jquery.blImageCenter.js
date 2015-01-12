@@ -10,11 +10,12 @@
  * Usage: See documentation at http://boxlight.github.com/bl-jquery-image-center
  */
 (function($) {
-  $.fn.centerImage = function(method, callback) {
+  $.fn.centerImage = function(method, callback, fixTop) {
     callback = callback || function() {};
     var els = this;
     var remaining = $(this).length;
     method = method == 'inside';
+	fixTop = fixTop == 'fix-top';
 
     // execute this on an individual image element once it's loaded
     var fn = function(img) {
@@ -51,7 +52,7 @@
       $img.css({
         'position': 'absolute',
         'left':     Math.round((div.w - img.w) / 2),
-        'top':      Math.round((div.h - img.h) / 3)
+        'top':      fixTop ? 0 : Math.round((div.h - img.h) / 3)
       });
 
       callbackWrapped(img)

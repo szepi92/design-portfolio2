@@ -78,7 +78,7 @@ $('.page').windows({
 // Uses the "jQuery Image Center" plugin (by Boxlight)
 function centerThumbs() {
 	$('.thumbnail-img').each(function(){
-		$(this).centerImage();
+		$(this).centerImage(null,null,'fix-top');
 	});
 }
 

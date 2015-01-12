@@ -12,19 +12,6 @@ body {
 
 }
 
-
-.nav-bar {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-.nav-bar li {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}
-
 a, a:hover, a:link, a:focus, a:visited, a:active {
 	text-decoration: none;
 }
@@ -145,6 +132,14 @@ a:link, a:visited {
 	display: none;
 }
 
+/* Whenever you want a little margin */
+.wrapper {
+	padding: 0px;
+	width: 90%;
+	height: 100%;
+	position: relative;
+}
+
 /* SPLASH PAGE
 -------------------------------------------------- */
 #splash-page {
@@ -157,16 +152,75 @@ a:link, a:visited {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	
+	opacity: 0;
+	
+	transition: width 2s, height 2s, left 2s, top 2s;
+	-moz-transition: width 2s, height 2s, left 2s, top 2s;
+	-o-transition: width 2s, height 2s, left 2s, top 2s;
+	-webkit-transition: width 2s, height 2s, left 2s, top 2s;
+	
+	transition: width 2s;
+	transition: width 2s;
+	transition: width 2s;
+	transition: hi
+}
+
+#small-logo {
+	position: absolute;
+	bottom: 0;
+	left: 5%;
+	z-index: 10000000;
+	width: 300px;
+	height: auto;
+	padding-bottom: 13px;
+	background-color: transparent;
+	opacity: 0;
+	
+	transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+	-o-transition: opacity 2s;
+	-moz-transition: opacity 2s;
+}
+
+#small-logo.sticky {
+	position: fixed;
+	top: 13px;
+	opacity: 1;
+	
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	-moz-transition: opacity 1s;
 }
 
 .nav-bar {
 	display: block;
+	list-style-type: none;
 	text-align: right;
-	position: absolute;
 	
-	width: 90%;
-	left: 5%;
-	bottom: 5%;
+	position: absolute;
+	width: 100%;
+	padding-right: 5%;
+	right: 0;
+	bottom: 0;
+	
+	padding-top: 13px;
+	padding-bottom: 13px;
+	
+	margin: 0;
+	background-color: transparent;
+	
+	transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-webkit-transition: background-color 1s;
+	-o-transition: background-color 1s;
+}
+
+.nav-bar li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
 }
 
 .nav-bar .nav-bar-item {
@@ -187,18 +241,24 @@ a:link, a:visited {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 26px;
+	line-height: 26px;
 }
 
 .nav-bar .nav-bar-item a:hover {
 	color: #319CC3;
 }
 
-/* Whenever you want a little margin */
-.wrapper {
-	padding: 0px;
-	width: 90%;
-	height: 100%;
-	position: relative;
+.nav-bar.sticky {
+	position: fixed;
+	top: 0;
+	bottom: auto;
+	height: 26px;
+	z-index: 5000000;
+	background-color: #231F20;
+}
+
+.nav-bar.sticky ul {
+	margin-right: 10%;
 }
 
 /* ABOUT PAGE
@@ -297,7 +357,7 @@ a:link, a:visited {
 #project-header {
 	height: 200px;
 	width: 100%;
-	background-color: #222222;
+	background-color: #231F20;
 	display: block;
 	color: white;
 	text-align: center;

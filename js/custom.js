@@ -4,27 +4,6 @@ $(document).ready(function(){
 // Hack to hide things while still forcing them to load
 $('.js-hidden').delay(1).fadeTo(0,0,'linear');
 
-// Style grid-cells to play nicely (Masonry!)
-$('.grid').each(function(idx, el){
-	var $el = $(el);
-	var gutter = $el.data("gutter");
-	var fitWidth = $el.data("fit");
-	var columnWidth = $el.data("columnWidth");
-	if (!_.isFinite(gutter)) gutter = 0;
-	
-	var msn = $(this).masonry({
-		itemSelector: '.grid-cell',
-		gutter: gutter,
-		containerStyle: {},
-		isFitWidth: fitWidth,
-		columnWidth: columnWidth
-	});
-	
-	$(this).imagesLoaded(function(){
-		msn.masonry();
-	});
-});
-
 function setActivePage(id) {
 	$('.nav-bar-item a').removeClass('active');
 	$('.nav-bar-item a[href="'+id+'"]').addClass('active');
@@ -76,20 +55,9 @@ function setActivePage(id) {
 			} else {
 				setActivePage('');
 			}
-		}
-	});
-	
-	// When passed view, hide Reka
-	$('#about-page').waypoint({
-		handler: function(direction) {
-			if (direction === 'down') {
-				$('#reka-image').addClass("hidden");
-			} else {
-				$('#reka-image').removeClass("hidden");
-			}
 		},
 		
-		offset: '-95%'
+		offset: '52px'
 	});
 	
 	// Highlight active page (Skills)
@@ -100,7 +68,9 @@ function setActivePage(id) {
 			} else {
 				setActivePage('#about-page');
 			}
-		}
+		},
+		
+		offset: '52px'
 	});
 	
 	// Highlight active page (Projects)
@@ -111,7 +81,9 @@ function setActivePage(id) {
 			} else {
 				setActivePage('#skills-page');
 			}
-		}
+		},
+		
+		offset: '52px'
 	});
 	
 	// Highlight active page (Contacts)
@@ -122,7 +94,9 @@ function setActivePage(id) {
 			} else {
 				setActivePage('#project-header');
 			}
-		}
+		},
+		
+		offset: '52px'
 	});
 })();
 
@@ -176,10 +150,9 @@ $('a.scroll-click').click(function(){
 	var top = offset.top;
 	if (!_.isFinite(top)) return true;
 	
-	$('body,html').animate({scrollTop: top}, 1000);
+	$('body,html').animate({scrollTop: top - 51}, 1000);
 	return false;
 });
-
 
 // Mobile menu!
 function updateButtonState() {
@@ -192,6 +165,18 @@ function updateButtonState() {
 
 $('#menu-button').click(function(){
 	$('.drop-down').toggle(200, updateButtonState);
+	return false;
+});
+
+
+$(window).click(function(){
+	$('.drop-down').hide();
+	$('#menu-button').removeClass('pressed');
+});
+
+$('.nav-bar-item a').click(function(){
+	$('.drop-down').hide();
+	$('#menu-button').removeClass('pressed');
 });
 
 });

@@ -4,6 +4,7 @@ html,body {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
+	width: 100%;
 }
 
 body {
@@ -70,13 +71,23 @@ ul {
 -------------------------------------------------- */
 .page {
 	width: 100%;
+	height: calc(100% - 52px);
+	
 	height: 100%;
+	height: -webkit-calc(100% - 52px);
+	height: -moz-calc(100% - 52px);
+	height: calc(100% - 52px);
+	
 	margin: 0;
 	padding: 0;
 	position: relative;
 	background-color: white;
 	overflow: hidden;
+	
 	min-height: 355px;
+	min-width: 320px;
+	
+	overflow-x: hidden;
 }
 
 .page.small-page {
@@ -149,6 +160,11 @@ ul {
 -------------------------------------------------- */
 #splash-page {
 	background: #231F20;
+	height: 100%;
+}
+
+.page#splash-page {
+	min-width: initial;
 }
 
 .title-image {
@@ -278,6 +294,7 @@ ul {
 	display: block;
 	text-align: center;
 	width: 100%;
+	z-index: 1;
 }
 
 #reka-image {
@@ -298,7 +315,7 @@ ul {
 	max-width: 50%;
 }
 
-.about-me-title {
+.about-me-title, #and {
 	display: inline-block;
 	font-size: 60px;
 	color: #303030;
@@ -306,11 +323,8 @@ ul {
 
 #and {
 	font-family: 'Niconne', cursive;
-	display: inline-block;
-	font-size: 60px;
 	margin-left: 2%;
 	margin-right: 2%;
-	color: #303030;
 }
 
 #philosophy {
@@ -327,21 +341,39 @@ ul {
 -------------------------------------------------- */
 #skills-page {
 	background: white;
+	min-height: 300px;
+}
+
+#skills-page .wrapper {
+	height: 90%;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	overflow: visible;
 }
 
 #skills-page .grid {
-	max-height: 100%;
+	height: 100%;
+	width: 100%;
 	position: relative;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
 }
 
 #skills-page .skill-card {
 	display: inline-block;
-	padding: 0;
 	text-align: center;
-	height: auto;
-	width: 330px;
-	margin-bottom: 30px;
-	margin-top: 30px;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	max-width: 33.333%;
+	height: 50%;
+}
+
+.skill-card h5 , .skill-card img{
+	
 }
 
 #skills-page .skill-icon {
@@ -360,6 +392,7 @@ ul {
 	display: block;
 	color: white;
 	text-align: center;
+	overflow: hidden;
 }
 
 #project-header h1 {
@@ -390,22 +423,20 @@ ul {
 .project .grid {
 	height: 100%;
 	width: 100%;
-	padding: 0px;
-}
-
-.project .grid-sizer {
-	width: 25%;
+	padding: 0;
 }
 
 .project .grid-cell {
 	height: 100%;
-	width: 50%;
+	width: 49.5%;
 	margin: 0;
+	border: none;
+	vertical-align: top;
 }
 
 .project .thumbnails {
-	width: 100%;
-	height: 99%;
+	width: 99.5%;
+	height: 99.5%;
 	max-width: 100%;
 	max-height: 100%;
 	overflow: hidden;
@@ -417,8 +448,16 @@ ul {
 
 .project .project-dscrp {
 	width: 90%;
-	margin-left: 10%;
+	padding-left:10%;
 }
+
+.project .project-dscrp,
+.project .grid-cell,
+.project .grid
+{
+	overflow: visible;
+}
+
 
 .project .links {
 	position: relative;
@@ -435,21 +474,20 @@ ul {
 	color: #54c3eb;
 }
 
-.project .grid-sizer {
-	width: 25%;
-}
 
 /* CONTACT PAGE
 -------------------------------------------------- */
 
 #contact-page {
 	background-color: #EFEFEF;
-	height: 100%;
+	min-height: 100%;
+	height: auto;
 	text-align: center;
+	margin-top: 50px;
 }
 
 #contact-header {
-	padding-top: 15%;
+	padding-top: 10%;
 }
 
 #contact-header p {
@@ -460,6 +498,7 @@ ul {
 
 #contact-img {
 	margin-top: 3%;
+	max-width: 100%;
 }
 
 .media-icon {

@@ -3,3 +3,6 @@ bugs:
 	2 when the top bar is fixed the pages should not take up the full 
 		browser height but rather browser height - topbar
 		this would fix bug1
+		
+	3 Internet explorer - weird blue line in main landing image
+	4 Internet explorer - random white space at the bottom of the page

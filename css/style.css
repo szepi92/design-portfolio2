@@ -305,6 +305,7 @@ a:link, a:visited {
 .about-me-title {
 	display: inline-block;
 	font-size: 60px;
+	color: #303030;
 }
 
 #and {
@@ -313,6 +314,7 @@ a:link, a:visited {
 	font-size: 60px;
 	margin-left: 2%;
 	margin-right: 2%;
+	color: #303030;
 }
 
 #philosophy {
@@ -322,6 +324,7 @@ a:link, a:visited {
 	width: 80%;
 	margin-right: auto;
 	margin-left: auto;
+	color: #303030;
 }
 
 /* SKILLS PAGE

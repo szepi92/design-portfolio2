@@ -63,10 +63,6 @@ a:link, a:visited {
 	text-decoration: none;
 }
 
-ul {
-	list-style-type: none;
-}
-
 /* STYLING FOR PAGES AND CUSTOM CLASSES
 -------------------------------------------------- */
 .page {
@@ -458,7 +454,6 @@ ul {
 	overflow: visible;
 }
 
-
 .project .links {
 	position: relative;
 	top: 15px;
@@ -474,6 +469,10 @@ ul {
 	color: #54c3eb;
 }
 
+hr.project-separator {
+	color: silver;
+	width: 80%;
+}
 
 /* CONTACT PAGE
 -------------------------------------------------- */

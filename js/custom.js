@@ -36,6 +36,16 @@ $('.page').windows({
 (function(){
 	var seen = {};
 	
+	$('.nav-bar').waypoint({
+		handler: function(direction) {
+			if (direction === 'down') {
+				$('.nav-bar').addClass("sticky");
+			} else {
+				$('.nav-bar').removeClass("sticky");
+			}
+		}
+	})
+	
 	// When about half-way, fade in Reka
 	$('#about-page').waypoint({
 		handler: function(direction) {
@@ -85,7 +95,6 @@ function centerThumbs() {
 // Call it at beginning and on resize
 centerThumbs();
 $(window).resize(_.throttle(centerThumbs, 100));
-
 
 
 // Lightbox (the gallery!)

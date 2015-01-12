@@ -12,19 +12,6 @@ body {
 
 }
 
-
-.nav-bar {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-.nav-bar li {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}
-
 a, a:hover, a:link, a:focus, a:visited, a:active {
 	text-decoration: none;
 }
@@ -139,6 +126,14 @@ h6 {
 	display: none;
 }
 
+/* Whenever you want a little margin */
+.wrapper {
+	padding: 0px;
+	width: 90%;
+	height: 100%;
+	position: relative;
+}
+
 /* SPLASH PAGE
 -------------------------------------------------- */
 #splash-page {
@@ -155,12 +150,26 @@ h6 {
 
 .nav-bar {
 	display: block;
+	list-style-type: none;
 	text-align: right;
-	position: absolute;
 	
-	width: 90%;
-	left: 5%;
-	bottom: 5%;
+	position: absolute;
+	width: 100%;
+	padding-right: 5%;
+	right: 0;
+	bottom: 0;
+	
+	padding-top: 13px;
+	padding-bottom: 13px;
+	
+	margin: 0;
+	background: #231F20;
+}
+
+.nav-bar li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
 }
 
 .nav-bar .nav-bar-item {
@@ -181,18 +190,31 @@ h6 {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 26px;
+	line-height: 26px;
 }
 
 .nav-bar .nav-bar-item a:hover {
 	color: #319CC3;
 }
 
-/* Whenever you want a little margin */
-.wrapper {
-	padding: 0px;
-	width: 90%;
-	height: 100%;
-	position: relative;
+.nav-bar.sticky {
+	position: fixed;
+	top: 0;
+	bottom: initial;
+	z-index: 5000000;
+	/*right: 0;
+	margin: 0;
+	
+	z-index: 500000;
+	background-color: #231F20;
+	
+	height: 26px;
+	padding-top: 13px;
+	padding-bottom: 13px;*/
+}
+
+.nav-bar.sticky ul {
+	margin-right: 10%;
 }
 
 /* ABOUT PAGE

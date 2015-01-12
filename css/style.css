@@ -97,6 +97,14 @@ h6 {
 	transform: translateY(-50%);
 }
 
+.h-center2 {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
 .h-center {
 	display : block;
 	margin-left: auto;
@@ -313,15 +321,17 @@ h6 {
 }
 
 .project .thumbnails {
-	width: 50%;
-	max-height: 100%;
+	width: 49%;
+	height: 70%;
 	overflow: hidden;
 	cursor: pointer;
+	border: 1px solid #dddddd;
 }
 
 .project .thumbnails img {
-	min-width: 100%;
-	min-height: 100%;
+	max-width: initial;
+	max-height: initial;
+	vertical-align: middle;
 }
 
 .project .project-dscrp {
@@ -331,4 +341,9 @@ h6 {
 
 .project .grid-sizer {
 	width: 25%;
+}
+
+.project .thumbnails .thumb-box {
+	height: initial;
+	width: initial;
 }

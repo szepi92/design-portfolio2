@@ -73,6 +73,37 @@ $('.page').windows({
 	
 })();
 
+// do something with the real dimensions of the image
+function realDimensions(elem, callback) {
+	var image = new Image(); // or document.createElement('img')
+	var width, height;
+	image.onload = function() {
+	  width = this.width;
+	  height = this.height;
+	  callback(width,height, elem);
+	};
+	image.src = $(elem).attr('src');
+}
+
+// Center the project thumbnails
+function centerThumbs() {
+	var W = $(".thumbnails").width();
+	var H = $(".thumbnails").height();
+	
+	$(".thumb-box img").each(function (index, elem){
+		realDimensions(elem, function (w, h, elem) {
+			if (w*H >= h*W) {	// match top, scale width
+				$(elem).height(H);
+				$(elem).width(w * (H/h));
+			} else {
+				$(elem).height(h * (W/w));
+				$(elem).width(W);
+			}
+		});
+	});
+}
+centerThumbs();
+$(window).resize(_.throttle(centerThumbs,100));
 
 // Lightbox (the gallery!)
 $('.thumbnails').each(function() {

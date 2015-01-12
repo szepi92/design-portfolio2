@@ -4,6 +4,7 @@ html,body {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
+	width: 100%;
 }
 
 body {
@@ -82,7 +83,11 @@ ul {
 	position: relative;
 	background-color: white;
 	overflow: hidden;
+	
 	min-height: 355px;
+	min-width: 320px;
+	
+	overflow-x: hidden;
 }
 
 .page.small-page {
@@ -156,6 +161,10 @@ ul {
 #splash-page {
 	background: #231F20;
 	height: 100%;
+}
+
+.page#splash-page {
+	min-width: initial;
 }
 
 .title-image {
@@ -334,19 +343,36 @@ ul {
 	background: white;
 }
 
+#skills-page .wrapper {
+	height: 90%;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	overflow: visible;
+}
+
 #skills-page .grid {
-	max-height: 100%;
+	height: 100%;
+	width: 100%;
 	position: relative;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
 }
 
 #skills-page .skill-card {
 	display: inline-block;
-	padding: 0;
 	text-align: center;
-	height: auto;
-	width: 330px;
-	margin-bottom: 30px;
-	margin-top: 30px;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	max-width: 33.333%;
+	height: 50%;
+}
+
+.skill-card h5 , .skill-card img{
+	
 }
 
 #skills-page .skill-icon {
@@ -361,6 +387,7 @@ ul {
 #project-header {
 	height: 200px;
 	width: 100%;
+	max-width: 100%;
 	background-color: #231F20;
 	display: block;
 	color: white;
@@ -465,6 +492,7 @@ ul {
 
 #contact-img {
 	margin-top: 3%;
+	max-width: 100%;
 }
 
 .media-icon {

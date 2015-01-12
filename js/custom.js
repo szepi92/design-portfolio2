@@ -74,6 +74,20 @@ $('.page').windows({
 })();
 
 
+// Code to center the thumbnails in each project
+// Uses the "jQuery Image Center" plugin (by Boxlight)
+function centerThumbs() {
+	$('.thumbnail-img').each(function(){
+		$(this).centerImage(null,null,'fix-top');
+	});
+}
+
+// Call it at beginning and on resize
+centerThumbs();
+$(window).resize(_.throttle(centerThumbs, 100));
+
+
+
 // Lightbox (the gallery!)
 $('.thumbnails').each(function() {
 	// Do this for each thumbnails-div once the images are loaded

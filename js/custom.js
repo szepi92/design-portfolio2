@@ -1,28 +1,38 @@
-
-
 // This document initializes everything on load!
 $(document).ready(function(){
 
 // Hack to hide things while still forcing them to load
-$('.js-hidden').delay(0).fadeTo(0,0,'linear');		
+$('.js-hidden').delay(1).fadeTo(0,0,'linear');		
 
 // Style grid-cells to play nicely (Masonry!)
-$('.grid').masonry({
-	itemSelector: '.grid-cell',
-	gutter: 0,
-	containerStyle: {},
-	isFitWidth: true
+$('.grid').each(function(idx, el){
+	var $el = $(el);
+	var gutter = $el.data("gutter");
+	var fitWidth = $el.data("fit");
+	var columnWidth = $el.data("columnWidth");
+	if (!_.isFinite(gutter)) gutter = 0;
+	
+	$(this).masonry({
+		itemSelector: '.grid-cell',
+		gutter: gutter,
+		containerStyle: {},
+		isFitWidth: fitWidth,
+		columnWidth: columnWidth
+	});
+	
 });
 
 // TODO: THIS DOESN'T DO ANYTHING RIGHT NOW!!!
+/*
 $('.page').windows({
 	snapping: false,
 	snapSpeed: 500,
 	snapInterval: 1100,
-});
+});*/
 
 // Anonymous function to wrap variable scope
 // SCROLLING AND THE REKA IMAGE (Animations)
+// TODO: This doesn't work in mobile!!
 (function(){
 	var seen = {};
 	

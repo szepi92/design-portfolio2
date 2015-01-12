@@ -11,3 +11,6 @@ patterns/*
 assets/icons/ai/*
 assets/icons/*.ai
 assets/icons/*.AI
+images/*/Thumbs.db
+images/*/*/Thumbs.db
+images/Thumbs.db

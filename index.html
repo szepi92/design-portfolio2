@@ -14,14 +14,15 @@
 	<!-- TODO: Favicon -->
 	<link rel="icon" href="assets/favicon.ico">
 	
-	
+	<!-- FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 	
+	<!-- STYLE SHEETS -->
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/style.phone.css" type="text/css">
 	<link rel="stylesheet" href="css/animations.css" type="text/css">
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-	<!-- <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> -->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,8 +30,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -58,7 +57,7 @@
 				</div>
 			</div>
 			<div class="grid-cell" id="reka-cell">
-				<img id="reka-image" class="js-hidden" src="assets/reka.png" />
+				<img id="reka-image" class="js-hidden" src="assets/reka-small.png" />
 			</div>
 		</div>
 	</div>
@@ -66,7 +65,7 @@
 	<!-- Skills-->
 	<div class="page" id="skills-page">
 		<div class="wrapper h-center">
-			<div class="grid h-center v-center">
+			<div class="grid h-center v-center" data-fit="true">
 				<div class="grid-cell skill-card">
 					<img class="h-center skill-icon" src="assets/icons/ui-icon.svg" />
 					<h5>Illustration</h5>
@@ -113,18 +112,17 @@
 	</div>
 	
 	<!-- Projects-->
+	<div id="project-header">
+		<!-- TODO: Need to add the collage to the background -->
+		<h1>PROJECTS</h1>
+	</div>
 	
-	<div class="page big-page" id="projects-page">
-		<div id="project-header">
-			<!-- TODO: Need to add the collage to the background -->
-			<h1>PROJECTS</h1>
-		</div>
-		
-		<!-- Medley -->
-		<div id="project-medley" class="project">
-			<h2 id="title-medley">Medley</h2> <h4>- the smart search for your movies</h4>
-		
-			<div class="grid">
+	<!-- Medley -->
+	<div id="project-medley" class="project page">
+		<div class="wrapper h-center v-center">
+			<div class="grid" data-column-width=".grid-sizer">
+				<div class="grid-sizer"></div>
+				
 				<!-- These will appear in the lightbox -->
 				<div class="thumbnails grid-cell">
 					<div class="thumb-box2 horizontal"><img alt="Landing page as seen in the browser" src="images/medley/1.jpg"></div>
@@ -137,15 +135,17 @@
 				
 				<!-- The description -->
 				<div class="project-dscrp grid-cell">
+					<h3 id="title-medley">Medley - the smart search for your movies</h3>
 					<p>After a long day of designing and coding we love to just collapse on the couch and watch some Netflix. But it is often difficult to find good movies.</p>
 					<p>So we set out to solve this problem.</p>
 					<p>Medley combines data from Netflix, IMDb, and Rotten Tomatoes. We wrote the first iteration over a 36-hour hackathon. Since then we've refined our product and have released a beta version with limited search capabilities.</p>
 					<p>What I did</p>
-					<ul class="what-i-did">
+					<ol class="what-i-did">
 						<li>general concept and branding</li>
 						<li>visual and interaction design using Adobe Illustrator and Photoshop</li>
 						<li>front-end development using HTML, CSS, JS</li>
-					</ul>
+					</ol>
+					<!--<p>Medley combines data from Netflix, IMDb, and Rotten Tomatoes to give you a natural movie search engine. We wrote the first iteration over a 36-hour hackathon. Since then we've refined and released a limited beta.</p>-->
 				</div>
 			</div>
 			
@@ -153,23 +153,26 @@
 			<a target="_blank" class="ext-link" href="https://github.com/sud03r/hackaton"> GitHub </a>
 			<a target="_blank" class="ext-link" href="http://challengepost.com/software/medley" > ChallengePost </a>
 		</div>
-		
-		<!-- CUNC -->
-		<div id="project-cunc" class="project">
-			<h2 id="title-cunc">Canadian Undergraduate Neuroscience Conference</h2>
-		
-			<div class="grid">
-			<!-- These will appear in the lightbox -->
+	</div>
+	
+	<!-- CUNC -->
+	<div id="project-cunc" class="project page">
+		<div class="wrapper h-center v-center">
+			<div class="grid" data-column-width=".grid-sizer">
+				<div class="grid-sizer"></div>
+				
+				<!-- These will appear in the lightbox -->
 				<div class="thumbnails grid-cell">
 					<div class="thumb-box2 vertical"><img alt="Completed conference poster" src="images/cunc/poster.jpg"></div>
 					<div class="hidden"><img alt="CUNC Logo: A stylized depiction of a pyramidal neuron." src="images/cunc/Logo.jpg"></div>
 					<div class="hidden"><img alt="Initial logo designs" src="images/cunc/initial-design.jpg"></div>
-					<div class="hidden"><img alt="Landing page initial concept design" src="images/cunc/website.jpg"></div>
-					<div class="hidden"><img alt="Landing page in-progress concept design" src="images/cunc/website2.jpg"></div>
+					<!--<div class="hidden"><img alt="Landing page initial concept design" src="images/cunc/website.jpg"></div>
+					<div class="hidden"><img alt="Landing page in-progress concept design" src="images/cunc/website2.jpg"></div>-->
 				</div>
 			
 				<!-- The description -->
 				<div class="project-dscrp grid-cell">
+					<h3 id="title-cunc">Canadian Undergraduate Neuroscience Conference</h3>
 					<p>CUNC is the first undergraduate neuroscience conference ever held in Canada.</p>
 					<p>In the summer of 2014 I was asked to join the committee as the Visual Designer.</p>
 					<p>I'm currently working on designing and developing the website for the conference, where participants will register and submit abstracts.</p>
@@ -180,21 +183,19 @@
 					</ul>
 				</div>
 			</div>
-			
-			<!-- TODO: Add link to website once published, and add link to GitHub for code -->
-			<!--
+		
 			<a target="_blank" class="link" href="http://cunc.ca"> www.cunc.ca </a>
 			<a target="_blank" class="link" href="https://github.com/szepi92/cunc"> GitHub - TODO </a>
-			-->
 		</div>
-		
-		<!-- Reka Szepesvari Photography -->	
-		<div id="project-rsphoto" class="project">
-		
-			<h2 id="title-rsphoto">Reka Szepesvari Photography</h2>
-				
-			<div class="grid">
-			<!-- These will appear in the lightbox -->
+	</div>
+	
+	<!-- Reka Szepesvari Photography -->	
+	<div id="project-rsphoto" class="project page">
+		<div class="wrapper h-center v-center">
+			<div class="grid" data-column-width=".grid-sizer">
+				<div class="grid-sizer"></div>
+			
+				<!-- These will appear in the lightbox -->
 				<div class="thumbnails grid-cell">
 					<div class="thumb-box2 horizontal"><img alt="A minimal design for an image carousel" src="images/rsp/1.jpg"></div>
 					<div class="hidden"><img alt="Life Photography: The Bouquet (Frame 1)" src="images/rsp/2.jpg"></div>
@@ -206,6 +207,7 @@
 				
 				<!-- The description -->
 				<div class="project-dscrp grid-cell">
+					<h3 id="title-rsphoto">Reka Szepesvari Photography</h3>
 					<p>From the first moment I laid my hands on my DSLR camera I have fallen in love with photography. There is something special about capturing precious moments.</p>
 					<p>I built this website for two reasons: I wanted to escape the limitation of templates when showcasing my photos and I wanted to learn how to build a jQuery carousel from scratch.</p>
 					<p class="hidden">I looked at tons of jQuery slideshows and noted elements I liked and disliked. In the end, I came up with a new design that I felt would work well for my purpose.</p>
@@ -219,18 +221,19 @@
 					
 				</div>
 			</div>
-			
+		
 			<a target="_blank" class="link" href="http://rekaszepesvari.me/photography/"> www.rekaszepesvari.me/photography </a>
 			<a target="_blank" class="link" href="https://github.com/szepi92/photography-portfolio"> GitHub </a>
 		</div>
-			
-		<!-- Your Assistant Project -->	
-		<div id="project-ya" class="project">
+	</div>
 		
-			<h2 id="title-ya">Your Assistant Inc.</h2>
-		
-			<div class="grid">
-			<!-- These will appear in the lightbox -->
+	<!-- Your Assistant Project -->	
+	<div id="project-ya" class="project page">
+		<div class="wrapper h-center v-center">
+			<div class="grid" data-column-width=".grid-sizer">
+				<div class="grid-sizer"></div>
+
+				<!-- These will appear in the lightbox -->
 				<div class="thumbnails grid-cell">
 					<div class="thumb-box2 vertical"><img alt="Company logo" src="images/ya/logo4.jpg"></div>
 					<div class="hidden"><img alt="Homepage" src="images/ya/website.jpg"></div>
@@ -241,6 +244,7 @@
 				
 				<!-- The description -->
 				<div class="project-dscrp grid-cell">
+					<h3 id="title-ya">Your Assistant Inc.</h3>
 					<p>Your Assistant Inc. is an accounting company located throughout Canada.</p>
 					<p>What I did</p>
 					<ul class="what-i-did">
@@ -254,15 +258,15 @@
 			
 			<a target="_blank" class="link" href="http://yourassistant.ca/"> www.yourassistant.ca </a>
 		</div>
+	</div>
+		
+	<!-- T-SHIRT Designs -->		
+	<div id="project-shirt" class="project page">
+		<div class="wrapper h-center v-center">
+			<div class="grid" data-column-width=".grid-sizer">
+				<div class="grid-sizer"></div>
 
-			
-		<!-- T-SHIRT Designs -->		
-		<div id="project-shirt" class="project">
-		
-			<h2 id="title-shirt">T-Shirt Designs</h2>
-		
-			<div class="grid">
-			<!-- These will appear in the lightbox -->
+				<!-- These will appear in the lightbox -->
 				<div class="thumbnails grid-cell">
 					<div class="thumb-box2 vertical"><img alt="Titans Volleyball Tournament Logo: A stylized skull'n crossbones with a volleyball net and the letters: 'T.V.T'" src="images/shirt/1.jpg"></div>
 					<div class="hidden"><img alt="Programming contest t-shirt design" src="images/shirt/contest2.jpg"></div>
@@ -273,6 +277,7 @@
 				
 				<!-- The description -->
 				<div class="project-dscrp grid-cell">
+					<h3 id="title-shirt">T-Shirt Designs</h3>
 					<p>I love designing t-shirts!</p>
 					<p>This began back in high school when I entered a contest to design the logo for the Titan's Volleyball Tournament (TVT) and won! The theme was "pirates" and I had tons of fun combining volleyball with a skull and crossbones.</p>
 					<p>Since then, I have designed numerous t-shirts (mostly for friends and family members) and even screen printed them myself.</p>
@@ -282,46 +287,17 @@
 						<li>screen-printed &amp; pressed designs onto shirts</li>
 					</ul>
 				</div>
-			</div>	
-		</div>	
-			
-		<!-- Hungarian School -->	
-		<div id="project-school" class="project">
-		
-		<h2 id="title-school">St. Emeric Hungarian School</h2>
-		
-			<div class="grid">
-			<!-- These will appear in the lightbox -->
-				<div class="thumbnails grid-cell">
-					<div class="thumb-box2 vertical"><img alt="Hungarian School logo" src="images/school/1.jpg"></div>
-					<div class="hidden"><img alt="Initial sketch" src="images/school/2.jpg"></div>
-					<div class="hidden"><img alt="Revised sketch" src="images/school/3.jpg"></div>
-				</div>
-				
-				<!-- The description -->
-				<div class="project-dscrp grid-cell">
-					<p>St. Emeric Hungarian School is designed to help children hold onto their heritage by teaching language arts and culture.</p>
-					<p>I worked at the school for a year, teaching preschoolers basic language skills through games.</p>
-					<p>The principal of the school asked me to design a new logo for the school.</p>
-					<p>What I did</p>
-					<ul class="what-i-did">
-						<li>worked with another designer to develop the initial concept</li>
-						<li>used pencil drawing as a reference and drew the design in Adobe Illustrator</li>
-						<li>used a warm pastel colour palette to reflect the happy environment of the school</li>
-					</ul>
-				</div>
 			</div>
-			
-			<a target="_blank" class="link" href="http://szentimremagyariskola.weebly.com/"> www.szentimremagyariskola.weebly.com </a>
-		</div>	
-		
-		<!-- Twine -->	
-		<div id="project-twine" class="project">
-		
-		<h2 id="title-twine">Twine</h2>
-		
-			<div class="grid">
-			<!-- These will appear in the lightbox -->
+		</div>
+	</div>	
+	
+	<!-- Twine -->	
+	<div id="project-twine" class="project page">
+		<div class="wrapper h-center v-center">
+			<div class="grid" data-column-width=".grid-sizer">
+				<div class="grid-sizer"></div>
+				
+				<!-- These will appear in the lightbox -->
 				<div class="thumbnails grid-cell">
 					<div class="thumb-box2 horizontal"><img alt="Landing page design" src="images/twine/1.jpg"></div>
 					<div class="hidden"><img alt="Log-in design" src="images/twine/3.jpg"></div>
@@ -330,6 +306,7 @@
 				
 				<!-- The description -->
 				<div class="project-dscrp grid-cell">
+					<h3 id="title-twine">Twine</h3>
 					<p>Students at the University of Waterloo have created groups on Facebook to buy and sell textbooks, offer and look for rides, and sublet apartments. However, it is nearly impossible to find relevant information on Facebook.</p>
 					<p>In the spring of 2014 I had the idea to create a website to help students find books, rides, or places to live more easily.</p>
 					<p>What I did</p>
@@ -345,15 +322,16 @@
 			<p>
 				I began designing the layout and visual look of the website, but unfortunately this projects has been put on the back burner.
 			</p>
-		</div>	
-			
-		<!-- COLT -->	
-		<div id="project-colt" class="project">
+		</div>
+	</div>	
 		
-		<h2 id="title-colt">Conference on Learning Theory</h2>
-		
-			<div class="grid">
-			<!-- These will appear in the lightbox -->
+	<!-- COLT -->	
+	<div id="project-colt" class="project page">
+		<div class="wrapper h-center v-center">
+			<div class="grid" data-column-width=".grid-sizer">
+				<div class="grid-sizer"></div>
+
+				<!-- These will appear in the lightbox -->
 				<div class="thumbnails grid-cell">
 					<div class="hidden"><img alt="Pencil and paper sketch" src="images/colt/1.jpg"></div>
 					<div class="hidden"><img alt="Background design for certificate" src="images/colt/2.jpg"></div>
@@ -362,6 +340,7 @@
 				
 				<!-- The description -->
 				<div class="project-dscrp grid-cell">
+					<h3 id="title-colt">Conference on Learning Theory</h3>
 					<p>The 27th Annual Conference on Learning Theory (COLT 2014) was held in Barcelona, Spain.</p>
 					<p>I was asked to design the certificates, incorporating something from the culture of the location.</p>
 					<p>What I did</p>
@@ -375,11 +354,8 @@
 			</div>
 			
 			<a target="_blank" class="link" href="http://orfe.princeton.edu/conferences/colt2014/"> www.orfe.princeton.edu/conferences/colt2014 </a>
-		</div>	
-			
-			
-	</div>
-	
+		</div>
+	</div>	
 	
 	
 	<!-- JavaScript Included at bottom of page for quick page loads -->
@@ -387,7 +363,6 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/underscore.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
-	<!-- <script src="js/bootstrap.min.js"></script> -->
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
 	<script src="js/jquery.center.min.js"></script>
 	<script src="js/retina.min.js"></script>

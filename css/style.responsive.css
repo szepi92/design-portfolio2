@@ -1,12 +1,23 @@
+/* Responsive nav-bar */
+@media (max-width: 900px) {
+	.nav-bar {
+	}
+	
+	#small-logo {
+		width: 200px;
+	}
+	
+	#small-logo.sticky {
+		top: 16px;
+	}
+}
+
+/*.nav-bar .media-lg { display: initial; }
+.nav-bar .media-sm { display: none; }*/
+
+/*
 @media (max-width: 767px) {
-
-}
-
-@media (max-width: 767px) {
-
-}
-
-
-@media (max-width: 465px){
-
-}
+	.nav-bar .media-lg { display: none; }
+	.nav-bar .media-sm { display: block; }
+	.nav-bar { min-width: 300px;}
+}*/

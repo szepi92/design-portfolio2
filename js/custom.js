@@ -1,8 +1,6 @@
 // This document initializes everything on load!
 $(document).ready(function(){
 
-$('body,html').animate({scrollTop: 0}, 1000);
-
 // Hack to hide things while still forcing them to load
 $('.js-hidden').delay(1).fadeTo(0,0,'linear');
 
@@ -24,13 +22,10 @@ $('.grid').each(function(idx, el){
 	
 });
 
-// TODO: THIS DOESN'T DO ANYTHING RIGHT NOW!!!
-/*
-$('.page').windows({
-	snapping: false,
-	snapSpeed: 500,
-	snapInterval: 1100,
-});*/
+function setActivePage(id) {
+	$('.nav-bar-item a').removeClass('active');
+	$('.nav-bar-item a[href="'+id+'"]').addClass('active');
+}
 
 // Anonymous function to wrap variable scope
 // SCROLLING AND THE REKA IMAGE (Animations)
@@ -38,7 +33,8 @@ $('.page').windows({
 (function(){
 	var seen = {};
 	
-	$('.nav-bar').waypoint({
+	// Make the nav-bar stick when we scroll down the page
+	$('#about-page').waypoint({
 		handler: function(direction) {
 			if (direction === 'down') {
 				$('.nav-bar').addClass("sticky");
@@ -47,7 +43,9 @@ $('.page').windows({
 				$('.nav-bar').removeClass("sticky");
 				$('#small-logo').removeClass("sticky");
 			}
-		}
+		},
+		
+		offset: '52px'
 	})
 	
 	// When about half-way, fade in Reka
@@ -71,8 +69,10 @@ $('.page').windows({
 	$('#about-page').waypoint({
 		handler: function(direction) {
 			if (direction === 'down') {
+				setActivePage('#about-page');
 				$('#reka-image').addClass("sticky");
 			} else {
+				setActivePage('');
 				$('#reka-image').removeClass("sticky");
 			}
 		}
@@ -89,6 +89,28 @@ $('.page').windows({
 		},
 		
 		offset: '-95%'
+	});
+	
+	// Highlight active page (Skills)
+	$('#skills-page').waypoint({
+		handler: function(direction) {
+			if (direction == 'down') {
+				setActivePage('#skills-page');
+			} else {
+				setActivePage('#about-page');
+			}
+		}
+	});
+	
+	// Highlight active page (Projects)
+	$('#project-header').waypoint({
+		handler: function(direction) {
+			if (direction == 'down') {
+				setActivePage('#project-header');
+			} else {
+				setActivePage('#skills-page');
+			}
+		}
 	});
 })();
 

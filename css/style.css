@@ -62,6 +62,9 @@ a:link, a:visited {
 	text-decoration: none;
 }
 
+ul {
+	list-style-type: none;
+}
 
 /* STYLING FOR PAGES AND CUSTOM CLASSES
 -------------------------------------------------- */
@@ -73,6 +76,7 @@ a:link, a:visited {
 	position: relative;
 	background-color: white;
 	overflow: hidden;
+	min-height: 300px;
 }
 
 .page.small-page {
@@ -206,25 +210,21 @@ a:link, a:visited {
 	background-color: transparent;
 }
 
-.nav-bar li {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}
-
 .nav-bar .nav-bar-item {
+	display: inline-block;
+	padding: 0;
 	margin-left: 4%;
 }
 .nav-bar .nav-bar-item:first-child {
 	margin-left: 0;
 }
 
-.nav-bar .nav-bar-item,
-.nav-bar .nav-bar-item a,
-.nav-bar .nav-bar-item a:link,
-.nav-bar .nav-bar-item a:hover,
-.nav-bar .nav-bar-item a:visited,
-.nav-bar .nav-bar-item a:active {
+.nav-bar-item,
+.nav-bar-item a,
+.nav-bar-item a:link,
+.nav-bar-item a:hover,
+.nav-bar-item a:visited,
+.nav-bar-item a:active {
 	color: #E2E0F5;
 	text-decoration: none;
 	text-transform: uppercase;

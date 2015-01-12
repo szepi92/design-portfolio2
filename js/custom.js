@@ -1,6 +1,8 @@
 // This document initializes everything on load!
 $(document).ready(function(){
 
+$('body,html').animate({scrollTop: 0}, 1000);
+
 // Hack to hide things while still forcing them to load
 $('.js-hidden').delay(1).fadeTo(0,0,'linear');
 
@@ -126,6 +128,22 @@ $('.thumbnails').each(function() {
 			image : { cursor: null }
 		});
 	});
+});
+
+
+// Nav-bar scrollable clicks
+$('a.scroll-click').click(function(){
+	var href = $(this).attr("href");
+	
+	if (!_.isFunction($(href).offset)) return true;
+	var offset = $(href).offset();
+	
+	if (!(_.isObject(offset) && _.has(offset,'top'))) return true;
+	var top = offset.top;
+	if (!_.isFinite(top)) return true;
+	
+	$('body,html').animate({scrollTop: top}, 1000);
+	return false;
 });
 
 });

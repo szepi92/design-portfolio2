@@ -117,3 +117,39 @@
 	.nav-bar.media-sm { display: block; }
 	.nav-bar { min-width: 300px;}
 }
+
+/* RESPONSIVE ABOUT ME
+-------------------------------------------------- */
+@media screen and (max-width: 767px) {
+	#about-page .grid-cell {
+		width: 100%;
+		max-height: 50%;
+	}
+	
+	#about-page #about-reka-block {
+		margin-top: 20px;
+	}
+
+	#about-page #reka-cell {
+		text-align: center;
+	}
+	#about-page #reka-image {
+		position: relative;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	#about-page #reka-cell {
+	}
+	
+	#about-page .about-me-title, #about-page #and {
+		font-size: 40px;
+		line-height: 40px;
+		margin-bottom: 0;
+	}
+	
+	#about-page #philosophy {
+		font-size: 23px;
+		margin-top: 15px;
+	}
+}

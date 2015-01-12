@@ -79,19 +79,6 @@ function setActivePage(id) {
 		}
 	});
 	
-	// When passed view, hide Reka
-	$('#about-page').waypoint({
-		handler: function(direction) {
-			if (direction === 'down') {
-				$('#reka-image').addClass("hidden");
-			} else {
-				$('#reka-image').removeClass("hidden");
-			}
-		},
-		
-		offset: '-95%'
-	});
-	
 	// Highlight active page (Skills)
 	$('#skills-page').waypoint({
 		handler: function(direction) {
@@ -176,10 +163,9 @@ $('a.scroll-click').click(function(){
 	var top = offset.top;
 	if (!_.isFinite(top)) return true;
 	
-	$('body,html').animate({scrollTop: top}, 1000);
+	$('body,html').animate({scrollTop: top - 52}, 1000);
 	return false;
 });
-
 
 // Mobile menu!
 function updateButtonState() {
@@ -192,6 +178,18 @@ function updateButtonState() {
 
 $('#menu-button').click(function(){
 	$('.drop-down').toggle(200, updateButtonState);
+	return false;
+});
+
+
+$(window).click(function(){
+	$('.drop-down').hide();
+	$('#menu-button').removeClass('pressed');
+});
+
+$('.nav-bar-item a').click(function(){
+	$('.drop-down').hide();
+	$('#menu-button').removeClass('pressed');
 });
 
 });

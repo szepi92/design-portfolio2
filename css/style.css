@@ -70,7 +70,13 @@ ul {
 -------------------------------------------------- */
 .page {
 	width: 100%;
+	height: calc(100% - 52px);
+	
 	height: 100%;
+	height: -webkit-calc(100% - 52px);
+	height: -moz-calc(100% - 52px);
+	height: calc(100% - 52px);
+	
 	margin: 0;
 	padding: 0;
 	position: relative;
@@ -149,6 +155,7 @@ ul {
 -------------------------------------------------- */
 #splash-page {
 	background: #231F20;
+	height: 100%;
 }
 
 .title-image {
@@ -278,6 +285,7 @@ ul {
 	display: block;
 	text-align: center;
 	width: 100%;
+	z-index: 1;
 }
 
 #reka-image {
@@ -298,7 +306,7 @@ ul {
 	max-width: 50%;
 }
 
-.about-me-title {
+.about-me-title, #and {
 	display: inline-block;
 	font-size: 60px;
 	color: #303030;
@@ -306,11 +314,8 @@ ul {
 
 #and {
 	font-family: 'Niconne', cursive;
-	display: inline-block;
-	font-size: 60px;
 	margin-left: 2%;
 	margin-right: 2%;
-	color: #303030;
 }
 
 #philosophy {

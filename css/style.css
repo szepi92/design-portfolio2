@@ -69,6 +69,12 @@ h6 {
 	margin: 0;
 }
 
+a:link, a:visited {
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
 /* STYLING FOR PAGES AND CUSTOM CLASSES
 -------------------------------------------------- */
 .page {
@@ -372,4 +378,44 @@ h6 {
 
 .project .grid-sizer {
 	width: 25%;
+}
+
+/* CONTACT PAGE
+-------------------------------------------------- */
+
+#contact {
+	background-color: #EFEFEF;
+	height: 100%;
+	text-align: center;
+}
+
+#contact-header {
+	padding-top: 10%;
+}
+
+#contact-header p {
+	margin-top: 2%;
+	font-size: 40px;
+}
+
+
+#contact-img {
+	margin-top: 3%;
+}
+
+.media-icon {
+	display: inline-block;
+	height: 60px;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	margin-top: 4%;
+	opacity: 0.5;
+}
+
+.media-icon:hover {
+	opacity: 0.8;
+}
+
+#portfolio {
+	margin-top: 10%;
 }

@@ -112,6 +112,17 @@ function setActivePage(id) {
 			}
 		}
 	});
+	
+	// Highlight active page (Contacts)
+	$('#contact-page').waypoint({
+		handler: function(direction) {
+			if (direction == 'down') {
+				setActivePage('#contact-page');
+			} else {
+				setActivePage('#project-header');
+			}
+		}
+	});
 })();
 
 

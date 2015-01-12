@@ -4,27 +4,6 @@ $(document).ready(function(){
 // Hack to hide things while still forcing them to load
 $('.js-hidden').delay(1).fadeTo(0,0,'linear');
 
-// Style grid-cells to play nicely (Masonry!)
-$('.grid[data-masonry="true"]').each(function(idx, el){
-	var $el = $(el);
-	var gutter = $el.data("gutter");
-	var fitWidth = $el.data("fit");
-	var columnWidth = $el.data("columnWidth");
-	if (!_.isFinite(gutter)) gutter = 0;
-	
-	var msn = $(this).masonry({
-		itemSelector: '.grid-cell',
-		gutter: gutter,
-		containerStyle: {},
-		isFitWidth: fitWidth,
-		columnWidth: columnWidth
-	});
-	
-	$(this).imagesLoaded(function(){
-		msn.masonry();
-	});
-});
-
 function setActivePage(id) {
 	$('.nav-bar-item a').removeClass('active');
 	$('.nav-bar-item a[href="'+id+'"]').addClass('active');

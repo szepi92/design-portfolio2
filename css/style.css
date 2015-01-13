@@ -67,6 +67,11 @@ ul {
 	list-style-type: none;
 }
 
+img {
+	outline: none;
+	border: none;
+}
+
 /* STYLING FOR PAGES AND CUSTOM CLASSES
 -------------------------------------------------- */
 .page {
